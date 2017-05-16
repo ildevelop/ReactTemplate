@@ -3,29 +3,30 @@
  */
 
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import {SET_NAME} from '../../Store/constant'
 import '../film-list/FilmList.scss'
 class FilmList extends Component {
     constructor(){
         super();
         this.state = {
-            names : [],
-            name: 'ilya'
+            filmsName : [],
         }
 
     }
 
     render(){
-        const seeList = this.props.names.map((name, key)=> <li className="mylist" key={key}> {name}</li>);
+        const {dispatch} = this.props;
         return(
             <div>
                 <h1>Film-list</h1>
-
                 <ul>
-                    {this.state.name}
-                    {seeList}
+                    {this.props.filmsName.map((name, key)=> <li onClick={() => {dispatch({type: SET_NAME, payload: name}) }   } className="mylist" key={key} > {name}</li>)}
                 </ul>
             </div>
         )
     }
 }
-export default FilmList
+
+
+export default connect()(FilmList)

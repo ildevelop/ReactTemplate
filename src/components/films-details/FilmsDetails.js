@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 class FilmsDetails extends Component {
     render(){
         return(
-            <div>Film details</div>
+            <div>{this.props.selectedFilm}</div>
         )
     }
 }
