@@ -21,7 +21,11 @@ class FilmList extends Component {
             <div>
                 <h1>Film-list</h1>
                 <ul>
-                    {this.props.filmsName.map((name, key)=> <li onClick={() => {dispatch({type: SET_NAME, payload: name}) }   } className="mylist" key={key} > {name}</li>)}
+                    {this.props.filmsName.map((name, key)=>
+                        <li onClick={() => {dispatch({type: SET_NAME, payload: name}) }   }
+                            className="mylist" key={key} >
+                            {name}
+                        </li>)}
                 </ul>
             </div>
         )

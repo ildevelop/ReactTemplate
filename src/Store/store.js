@@ -11,9 +11,6 @@ const initState = {
 }
 
 
-
-
-
 const reducerF = ( state = initState , action) => {
     switch (action.type) {
         case SET_NAME:
