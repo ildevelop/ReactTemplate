@@ -1,4 +1,25 @@
-.mylist{
-  background: #eee;
-  color: red;
-}
+.mylistA{
+   background: #eee;
+  list-style-type: none;
+  padding: 0;
+
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  .mylistB{
+    margin: 5px;
+    background-color: cadetblue;
+    padding: 10px 50px;
+    flex:1 1 300px;
+  }
+  .mylistC{
+    margin: 5px;
+    padding: 10px 50px;
+    background-color: aquamarine;
+    flex:1 1 300px;
+
+
+  }
+ }

@@ -20,12 +20,13 @@ class FilmList extends Component {
         return(
             <div>
                 <h1>Film-list</h1>
-                <ul>
+                <ul className="mylistA parent">
                     {this.props.filmsName.map((name, key)=>
                         <li onClick={() => {dispatch({type: SET_NAME, payload: name}) }   }
-                            className="mylist" key={key} >
+                            className="mylistB child" key={key} >
                             {name}
                         </li>)}
+                    <li className="mylistC child">Hello</li>
                 </ul>
             </div>
         )
