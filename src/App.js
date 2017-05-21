@@ -22,7 +22,7 @@ class App extends React.Component {
             <div>
                 <FilmList filmsName={this.props.names} />
                 <FilmsDetails selectedFilm={this.props.selectedFilm} />
-                <h1>{this.state.filmsName}</h1>
+                <h1>Hello {this.state.filmsName}</h1>
                 <input type="text" onChange={this.titleMe.bind(this)}/>
             </div>
         )
