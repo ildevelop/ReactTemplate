@@ -34,5 +34,5 @@ const mapStateToProps = (state) => {
         selectedFilm : state.selectedFilm,
         names: state.names
     }
-}
+};
 export default connect(mapStateToProps)(App)

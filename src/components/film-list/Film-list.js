@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import {SET_NAME} from '../../Store/constant'
 import {SortableContainer, SortableElement, arrayMove} from 'react-sortable-hoc';
 import '../film-list/FilmList.scss'
+import {addName} from "../../Store/ActionCreator";
 class FilmList extends Component {
     constructor() {
         super();
@@ -44,7 +45,7 @@ class FilmList extends Component {
                 <ul className="mylistA parent">
                     {this.props.filmsName.map((name, key) =>
                         <li onClick={() => {
-                            dispatch({type: SET_NAME, payload: name})
+                            dispatch(addName(name))
                         }   }
                             className="mylistB child" key={key}>
                             {name}
